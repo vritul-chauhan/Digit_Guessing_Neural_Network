@@ -1,5 +1,5 @@
 # Digit_Guessing_Neural_Network
-Recognises a number from 0-9 drawn by the user
+Recognises a digit from 0-9 drawn by the user
 
 ## Create_model.py
 This file contains the CNN Model. You can use to it train on the MNIST.
