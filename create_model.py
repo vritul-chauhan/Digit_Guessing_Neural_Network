@@ -5,7 +5,6 @@
 
 # In[1]:
 
-import install_requirements
 
 import numpy as np
 import pandas as pd
@@ -60,7 +59,7 @@ Y_test = tf.keras.utils.to_categorical(y_test, class_total)
 
 # ## Preprocessing Training set
 
-# In[7]:
+# In[6]:
 
 
 train_gen = ImageDataGenerator(rotation_range=8, width_shift_range=0.08, shear_range=0.3,
@@ -70,7 +69,7 @@ train_set = train_gen.flow(X_train, Y_train, batch_size=64)
 
 # ## Preprocessing Test set
 
-# In[8]:
+# In[7]:
 
 
 test_gen = ImageDataGenerator()
@@ -156,17 +155,44 @@ cnn.summary()
 cnn.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
 
-# In[20]:
+# In[19]:
 
 
-cnn.fit_generator(train_set, steps_per_epoch=60000/64, epochs=10, 
+cnn.fit_generator(train_set, steps_per_epoch=60000/64, epochs=7, 
                     validation_data=test_set, validation_steps=10000/64)
 
 
-# In[21]:
+# In[20]:
 
 
 score = cnn.evaluate(X_test, Y_test)
 print()
 print('Test accuracy: ', score[1])
+
+
+# ## Serialize model to JSON 
+
+# In[21]:
+
+
+model_json = cnn.to_json()
+with open("model.json", "w") as json_file:
+    json_file.write(model_json)
+
+
+# ## Serialize weights to HDF5
+
+# In[22]:
+
+
+cnn.save_weights("model.h5")
+print("Saved model to disk")
+
+
+# In[28]:
+
+
+plt.imshow(X_test[0].reshape(28, 28),cmap='Greys')
+pred = cnn.predict(X_test[0].reshape(1, 28, 28, 1))
+print(pred.argmax())
 
