@@ -12,5 +12,6 @@ Run it to start the Number Pad on which you can draw a digit from 0-9
 Press 'BACKSPACE' to clear the screen
 Press 'ENTER' or 'RETURN' to Identify the digit.
 
-![Image of number](https://github.com/Xyno18/Digit_Guessing_Neural_Network/blob/main/Screenshots/num5.PNG, "Digit Recogniser")
-![Image Guess](https://github.com/Xyno18/Digit_Guessing_Neural_Network/blob/main/Screenshots/guess.PNG, "Guess")
+![Image of number](Screenshots/num5.PNG, "Digit Recogniser")
+## 
+![Image Guess](Screenshots/guess.PNG, "Guess")
