@@ -5,6 +5,7 @@
 
 # In[1]:
 
+import install_requirements
 
 import numpy as np
 import pandas as pd
