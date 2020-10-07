@@ -1,4 +1,4 @@
-# NumberRecognizer
+# Digit_Guessing_Neural_Network
 Recognises a number from 0-9 drawn by the user
 
 ## Create_model.py
