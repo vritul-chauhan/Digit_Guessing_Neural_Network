@@ -12,6 +12,6 @@ Run it to start the Number Pad on which you can draw a digit from 0-9
 Press 'BACKSPACE' to clear the screen
 Press 'ENTER' or 'RETURN' to Identify the digit.
 
-![Image of number](Screenshots/num5.PNG, "Digit Recogniser")
+![Image of number](Screenshots/num5.PNG "Digit Recogniser")
 ## 
-![Image Guess](Screenshots/guess.PNG, "Guess")
+![Image Guess](Screenshots/guess.PNG "Guess")
